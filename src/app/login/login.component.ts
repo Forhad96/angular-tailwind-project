@@ -1,10 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { FormBuilder, FormGroup, Validators,ReactiveFormsModule } from '@angular/forms';
 @Component({
   selector: 'app-login',
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,ReactiveFormsModule],
   standalone: true,
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',
@@ -21,6 +20,7 @@ export class LoginComponent {
   }
 
   async onSubmit() {
+    console.log("clicking on submit");
     if (this.loginForm.invalid) return;
 
     this.isLoading.set(true);

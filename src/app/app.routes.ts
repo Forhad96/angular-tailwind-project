@@ -14,11 +14,13 @@ export const routes: Routes = [
   {
     path: 'about',
     loadComponent() {
-        return (
-          import('./about/about.component').then((c) => c.AboutComponent)
-        )
+      return import('./about/about.component').then((c) => c.AboutComponent);
     },
-  }
-  ,
-
+  },
+  {
+    path: 'todo',
+    loadComponent() {
+      return import('./todo/todo.component').then((c) => c.TodoComponent);
+    },
+  },
 ];

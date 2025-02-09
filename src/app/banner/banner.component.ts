@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input, signal } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
-
+bannerTitle = input("Welcome to Angular Tailwind Project")
 }

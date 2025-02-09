@@ -20,4 +20,8 @@ decrement(){
 reset(){
   this.counter.set(0)
 }
+
+keyUpValueChanged(event:KeyboardEventInit){
+  console.log(`user passed the value ${event.key}`);
+}
 }

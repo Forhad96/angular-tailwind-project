@@ -21,7 +21,7 @@
         </div>
   
         <!-- Form -->
-        <form (ngSubmit)="onSubmit()" class="space-y-4">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"  class="space-y-4">
           <div>
             <input
               type="email"
