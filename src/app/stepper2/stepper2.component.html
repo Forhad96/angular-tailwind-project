@@ -1,0 +1,14 @@
+<div class="border-4 h-600px] text-center">
+    <p class="text-2xl">This stepper2 run inside Home component component!</p>
+    <div class="step-container flex">
+        <div *ngFor="let step of steps; let i = index" class="step-item" [ngClass]="{'complete': step.complete, 'active': step.label === activeStep.label}">
+          <div class="step">{{ i + 1 }}</div>
+          <p>{{ step.label }}</p>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Previous</button>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Next</button>
+      </div>
+
+</div>

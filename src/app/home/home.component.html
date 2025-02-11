@@ -1,5 +1,14 @@
-<div>
-    <p class="text-3xl font-bold underline">home works!</p>
-    <app-counter ></app-counter>
-    <app-banner [bannerTitle]="bannerTitleHome()"  />
-</div>  
+<div class="border-4 my-5">
+    
+    <!-- <app-counter /> -->
+     <!-- <app-stepper2 /> -->
+    <!-- <app-banner [bannerTitle]="bannerTitleHome()" /> -->
+    <!-- <app-stepper [steps]="steps" [activeStep]="currentStep"></app-stepper> -->
+    <app-stepper3 
+    [totalSteps]="6" 
+    [currentStep]="myCurrentStep" 
+    [labels]="['Step 1', 'Step 2', 'Step 3', 'Step 4', 'Step 5', 'Step 6']"
+    (stepChange)="handleStepChange($event)">
+  </app-stepper3>
+
+</div>

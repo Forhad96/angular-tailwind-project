@@ -1,0 +1,22 @@
+<p>stepper3 works!</p>
+<div class="stepper-container">
+  <button (click)="prevStep()" [disabled]="currentStep <= 1">Previous</button>
+
+  <div class="stepper">
+    <div class="step" *ngFor="let step of steps" [class.active]="step <= currentStep"
+      [class.clickable]="step > currentStep" (click)="goToStep(step)">
+
+      <!-- <div class="step-count">
+          {{ step <= currentStep ? step : '' }}
+        </div> -->
+
+      <!-- <div class="step-label" *ngIf="labels.length">
+          {{ getStepLabel(step) }}
+        </div> -->
+      <p>{{ getCurrentStepLabel() }}</p>
+      <div class="step-line" *ngIf="step < totalSteps"></div>
+    </div>
+  </div>
+
+  <button (click)="nextStep()" [disabled]="currentStep >= totalSteps">Next</button>
+</div>

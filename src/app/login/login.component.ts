@@ -1,9 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, signal } from '@angular/core';
 import { FormBuilder, FormGroup, Validators,ReactiveFormsModule } from '@angular/forms';
+import { AuthLayoutComponent } from "../shared/auth-layout/auth-layout.component";
 @Component({
   selector: 'app-login',
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, AuthLayoutComponent],
   standalone: true,
   templateUrl: './login.component.html',
   styleUrl: './login.component.css',

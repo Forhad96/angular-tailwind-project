@@ -1,0 +1,24 @@
+<p>stepper works!</p>
+<div class="stepper">
+    <div class="steps">
+      <div 
+        *ngFor="let step of steps; let i = index" 
+        class="step" 
+        [class.active]="i === activeStep"
+        (click)="goToStep(i)">
+        {{ step.label }}
+      </div>
+    </div>
+  
+    <div class="content">
+      <ng-container *ngIf="steps[activeStep]">
+        <ng-container *ngComponentOutlet="steps[activeStep].component"></ng-container>
+      </ng-container>
+    </div>
+  
+    <div class="controls">
+      <button (click)="prevStep()" [disabled]="activeStep === 0">Previous</button>
+      <button (click)="nextStep()" [disabled]="activeStep === steps.length - 1">Next</button>
+    </div>
+  </div>
+  

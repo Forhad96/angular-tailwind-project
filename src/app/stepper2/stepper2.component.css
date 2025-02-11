@@ -1,0 +1,50 @@
+.step-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 9rem; /* Equivalent to w-36 in Tailwind */
+}
+
+.step-item:not(:first-child)::before {
+  content: '';
+  background-color: #e2e8f0; /* Equivalent to bg-slate-200 in Tailwind */
+  position: absolute;
+  width: 100%;
+  height: 3px; /* Equivalent to h-[3px] in Tailwind */
+  right: 50%; /* Equivalent to right-2/4 in Tailwind */
+  top: 33.33%; /* Equivalent to top-1/3 in Tailwind */
+  transform: translateY(-50%); /* Equivalent to -translate-y-2/4 in Tailwind */
+}
+
+.step {
+  width: 2.5rem; /* Equivalent to w-10 in Tailwind */
+  height: 2.5rem; /* Equivalent to h-10 in Tailwind */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  position: relative;
+  background-color: #1e293b; /* Equivalent to bg-slate-700 in Tailwind */
+  border-radius: 9999px; /* Equivalent to rounded-full in Tailwind */
+  font-weight: 600; /* Equivalent to font-semibold in Tailwind */
+  color: white; /* Equivalent to text-white in Tailwind */
+}
+
+.active .step {
+  background-color: #0284c7; /* Equivalent to bg-sky-600 in Tailwind */
+}
+
+.complete .step {
+  background-color: #16a34a; /* Equivalent to bg-green-600 in Tailwind */
+}
+
+.complete p {
+  color: white; /* Equivalent to text-white in Tailwind */
+}
+
+.complete:not(:first-child)::before,
+.active:not(:first-child)::before {
+  background-color: #16a34a; /* Equivalent to bg-green-600 in Tailwind */
+}
